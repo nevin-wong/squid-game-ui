@@ -1,0 +1,139 @@
+.num-players {
+  font-family: "DisplaySquid", "Courier New", Courier, monospace;
+  margin: 10px;
+  color: rgba(204, 255, 204, 0.6);
+  font-size: 25px;
+}
+
+#num-players-kr {
+  font-size: 27px;
+}
+
+.kr-ppl {
+  color: rgba(204, 255, 204, 1);
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+#kr-ppl {
+  font-size: 65px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.kr {
+  font-family: "KoreanPixels", "Courier New", Courier, monospace;
+  font-size: 55px;
+  letter-spacing: 23px;
+}
+
+.slot-container {
+  margin-bottom: 25%;
+}
+
+.slot-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 50%
+  );
+  filter: blur(1.3px); /* Adjust the blur radius as needed */
+  background-size: 100% 6.5px; /* Adjust the size to control the spacing of the lines */
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+.char {
+  position: relative; /* Ensure the pseudo-elements are positioned relative to the .char element */
+  font-size: 10em;
+  color: #ccffcc;
+  font-family: "PrizeMoney", "Courier New", Courier, monospace;
+  filter: drop-shadow(0 0 50px rgba(204, 255, 204, 0.6));
+}
+
+.char::before,
+.char::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 12px;
+  background-color: #ccffcc; /* Set the color of the bar */
+  z-index: 1;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.char::before {
+  top: 0; /* Position the bar right above the character */
+}
+
+.char::after {
+  bottom: 0; /* Position the bar right below the character */
+}
+
+.input-container {
+  font-family: "SquidGame", "Courier New", Courier, monospace;
+  font-size: 22.5px; /* Adjust the font size as needed */
+  z-index: 3; /* Ensure the input container is above the TV pattern overlay */
+  position: relative; /* Ensure it stays in its original position */
+}
+
+.input-container input {
+  font-family: "PrizeMoney", "Courier New", Courier, monospace;
+  font-size: inherit;
+  padding: 12px;
+  width: 100px; /* Adjust the width to make the input bar shorter */
+  margin-right: 10px; /* Add space between input and button */
+  text-align: center; /* Center the text inside the input */
+  border-radius: 8px; /* Round the corners */
+}
+
+.input-container button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 7px 15px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* Round the corners */
+}
+
+.input-container button:hover {
+  background-color: deeppink; /* Change color on hover */
+}
+
+.input-container button:active {
+  background-color: darkmagenta; /* Change to an even deeper pink when pressed */
+  transition: none; /* Remove transition for immediate effect */
+}
+
+button:disabled {
+  cursor: not-allowed; /* Change the cursor to a not-allowed cursor */
+  opacity: 0.6; /* Optional: Add some transparency to the button */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 0.3s step-start 2; /* ADJUST THE LENGTH OF EACH BLINK (0.5s) AND THE NUMBER OF BLINKS (4 steps for 2 blinks) HERE */
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "PrizeMoney";
+  src: url("./Fonts/squid-prize-money.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SquidGame";
+  src: url("./Fonts/squid-game-font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DisplaySquid";
+  src: url("./Fonts/squid-display-font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "KoreanPixels";
+  src: url("./Fonts/korean-pixels.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.index-module_numbers__sqlqm {
+  padding-left: 7%;
+  padding-top: 14%;
+}
