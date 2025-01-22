@@ -29,6 +29,9 @@
 .kr {
   font-family: "KoreanPixels", "Courier New", Courier, monospace;
   font-size: 55px;
+}
+
+.kr .spacing {
   letter-spacing: 23px;
 }
 

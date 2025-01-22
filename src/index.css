@@ -18,6 +18,11 @@
   src: url("./Fonts/korean-pixels.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "XO";
+  src: url("./Fonts/kraftundstil.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

@@ -1,0 +1,193 @@
+.vote-display {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.scoreboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 50%
+  );
+  filter: blur(1.3px); /* Adjust the blur radius as needed */
+  background-size: 100% 6.5px; /* Adjust the size to control the spacing of the lines */
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+.score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.icon {
+  font-size: 3.5em;
+  margin-bottom: 50px;
+  font-family: "DisplaySquid", "Courier New", Courier, monospace;
+}
+
+.icon.red {
+  color: #ff3737; /* Mix 25% white into red */
+  filter: drop-shadow(
+    0 0 30px rgba(255, 102, 102, 0.9)
+  ); /* Red drop shadow with 25% white */
+}
+
+.icon.blue {
+  color: #3a3aff; /* Mix 25% white into blue */
+  filter: drop-shadow(
+    0 0 30px rgba(102, 102, 255, 0.9)
+  ); /* Blue drop shadow with 25% white */
+}
+
+.score {
+  display: flex; /* Align characters horizontally */
+  justify-content: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  border: 6px solid black; /* Apply the border to the entire score container */
+  border-image: linear-gradient(
+      to bottom,
+      black 46%,
+      #ccffcc 46%,
+      #ccffcc 54%,
+      black 54%
+    )
+    1 100%;
+  box-shadow: 0 0 0 2px rgba(204, 255, 204, 0.4),
+    inset 0 0 0 2px rgba(204, 255, 204, 0.4);
+}
+
+.vote-char {
+  font-size: 7em;
+  color: #ccffcc;
+  font-family: "PrizeMoney", "Courier New", Courier, monospace; /* Monospace font */
+  filter: drop-shadow(0 0 50px rgba(204, 255, 204, 0.6));
+  margin: 0 4px;
+  width: 0.75em; /* Ensure each character takes up the same width */
+  text-align: center; /* Center the text within the div */
+  transform: translate(2px, 20px);
+}
+
+.vote-char-wrapper {
+  position: relative;
+}
+
+.vote-char-wrapper:last-child {
+  width: 139px;
+}
+
+.vote-char-wrapper:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 0;
+  bottom: -6px;
+  width: 6px; /* Adjust the width of the vertical line as needed */
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    black 45%,
+    #ccffcc 46%,
+    #ccffcc 54%,
+    black 55%,
+    black 100%
+  );
+  border-left: 2px solid rgba(204, 255, 204, 0.4); /* Add left border */
+  border-right: 2px solid rgba(204, 255, 204, 0.4); /* Add right border */
+}
+
+.divider {
+  font-size: 3.5em;
+  color: rgba(204, 255, 204, 0.6);
+  filter: drop-shadow(0 0 50px rgba(204, 255, 204, 0.6));
+  font-family: "DisplaySquid", "Courier New", Courier, monospace;
+  transform: translateY(-1.35em); /* Move the colon up */
+}
+
+.button-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  padding: 40px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+  border: 4px solid black; /* Add black border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+  transition: background-color 0.1s, filter 0.1s; /* Smooth transition for background color and filter */
+  font-family: "XO", "Courier New", Courier, monospace;
+  user-select: none; /* Prevent text selection */
+}
+
+.button:active {
+  filter: none; /* Remove the drop-shadow filter when the button is pressed */
+}
+
+.red-button {
+  background-color: red;
+}
+
+.red-button:hover {
+  background-color: #ff6666; /* Lighter red on hover */
+}
+
+.red-button:active {
+  background-color: red; /* Original color on press */
+}
+
+.blue-button {
+  background-color: blue;
+}
+
+.blue-button:hover {
+  background-color: #6666ff; /* Lighter blue on hover */
+}
+
+.blue-button:active {
+  background-color: blue; /* Original color on press */
+}
+
+.button-text {
+  pointer-events: none; /* Ensure the text is not clickable */
+  padding-top: 3px; /* Add padding to the top */
+  padding-left: 3px; /* Add padding to the left */
+}

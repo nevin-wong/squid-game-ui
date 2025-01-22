@@ -50,7 +50,11 @@ const SlotDisplay = () => {
     <div>
       <div className="slot-container">
         <div className="num-players" id="num-players-kr">
-          * <span className="kr">참가인원</span> *
+          *{" "}
+          <span className="kr">
+            <span className="spacing">참가인</span>원
+          </span>{" "}
+          *
         </div>
         <div className="num-players">NUMBER OF PLAYERS</div>
         <div className="flex-container">
